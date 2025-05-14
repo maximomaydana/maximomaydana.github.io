@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joyassnela</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="marquesina">
+    <div class="marquesina-contenido">
+      Envíos a todo el país! &nbsp; Envíos a todo el país! &nbsp; …
+    </div>
+  </div>
+  
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="logo-empresa.png" alt="Logo de la empresa" />
+      </a>
+    </div>
+
+    <div class="menu-navegacion">
+      <nav>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="carrito-header">
+      <a href="#" id="abrir-carrito">
+        <img src="https://cdn-icons-png.flaticon.com/512/833/833314.png" alt="Carrito" class="icono-carrito" />
+        <span class="contador" id="contador-carrito">0</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- PANEL DEL CARRITO -->
+  <div id="carrito-panel" class="carrito-panel">
+    <div class="carrito-header-panel">
+      <h2>Tu Carrito</h2>
+      <button id="cerrar-carrito">&times;</button>
+    </div>
+    <ul id="carrito-items" class="carrito-items"></ul>
+    <div class="carrito-total">
+      Total: $<span id="total">0</span>
+      <button id="finalizar-compra">Finalizar Compra</button>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <h1>Joyassnela</h1>
+    <p>Ofrecemos soluciones innovadoras para potenciar tu negocio y llevarlo al siguiente nivel.</p>
+    <a href="#servicios" class="boton-accion">Conocé nuestros servicios</a>
+  </section>
+
+  <!-- DOS COLUMNAS -->
+  <section class="seccion-dos-columnas">
+    <div class="columna imagen">
+      <div class="contenedor-imagen">
+        <img src="https://via.placeholder.com/1000x700?text=Imagen+Extra+Grande" alt="Ejemplo Grande" />
+      </div>
+    </div>
+    <div class="columna contenido">
+      <h2>Sobre Nosotros</h2>
+      <p>Diseños exclusivos y modernos.</p>
+      <p>Productos artesanales únicos.</p>
+      <p>Experiencia personalizada.</p>
+      <a href="#servicios" class="enlace-servicios">Conocé Nuestro Trabajo</a>
+    </div>
+  </section>
+
+<!-- PRODUCTOS DESTACADOS -->
+<section class="productos">
+  <h2>Nuestros Productos</h2>
+  <div class="grid-productos">
+    
+    <div class="producto">
+      <img src="https://via.placeholder.com/300x200?text=Anillo+Oro" alt="Anillo Oro">
+      <h3>Anillo de Oro</h3>
+      <p>$5.000</p>
+      <button onclick="agregarAlCarrito('Anillo de Oro', 5000)">Agregar al carrito</button>
+    </div>
+
+    <div class="producto">
+      <img src="https://via.placeholder.com/300x200?text=Collar+Plata" alt="Collar Plata">
+      <h3>Collar de Plata</h3>
+      <p>$3.200</p>
+      <button onclick="agregarAlCarrito('Collar de Plata', 3200)">Agregar al carrito</button>
+    </div>
+
+    <div class="producto">
+      <img src="https://via.placeholder.com/300x200?text=Pulsera" alt="Pulsera">
+      <h3>Pulsera de Acero</h3>
+      <p>$2.800</p>
+      <button onclick="agregarAlCarrito('Pulsera de Acero', 2800)">Agregar al carrito</button>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- GALERÍA -->
+  <section class="galeria">
+    <h2>Galería de Proyectos</h2>
+    <div class="grid-galeria">
+      <img src="https://via.placeholder.com/300x200?text=Imagen+1" alt="Imagen 1" />
+      <img src="https://via.placeholder.com/300x200?text=Imagen+2" alt="Imagen 2" />
+      <img src="https://via.placeholder.com/300x200?text=Imagen+3" alt="Imagen 3" />
+      <img src="https://via.placeholder.com/300x200?text=Imagen+4" alt="Imagen 4" />
+      <img src="https://via.placeholder.com/300x200?text=Imagen+5" alt="Imagen 5" />
+      <img src="https://via.placeholder.com/300x200?text=Imagen+6" alt="Imagen 6" />
+    </div>
+  </section>
+
+  <!-- INFO SERVICIOS -->
+  <section class="info-servicios" id="servicios">
+    <div class="bloque">
+      <img src="https://cdn-icons-png.flaticon.com/512/2910/2910768.png" alt="Envíos" />
+      <h3>Envíos</h3>
+      <p>Andreani</p>
+    </div>
+    <div class="bloque">
+      <a href="https://wa.me/549XXXXXXXXXX" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+        <h3>Escribinos!</h3>
+        <p>WhatsApp disponible</p>
+      </a>
+    </div>
+    <div class="bloque">
+      <img src="https://cdn-icons-png.flaticon.com/512/633/633611.png" alt="Pagos" />
+      <h3>Medios de Pago</h3>
+      <p>Transferencia, tarjetas y efectivo</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="contacto">
+    <div class="columna-footer logo-footer">
+      <img src="logo-empresa.png" alt="Logo de la empresa" />
+    </div>
+    <div class="columna-footer servicios-footer">
+      <h3>Servicios</h3>
+      <ul>
+        <li>Diseño Web</li>
+        <li>Frontend</li>
+        <li>Responsive Design</li>
+      </ul>
+    </div>
+    <div class="columna-footer legales-footer">
+      <h3>Legales</h3>
+      <ul>
+        <li>Aviso legal</li>
+        <li>Política de privacidad</li>
+        <li>Términos de uso</li>
+        <li>Cookies</li>
+      </ul>
+    </div>
+    <div class="columna-footer redes-footer">
+      <h3>Redes Sociales</h3>
+      <div class="redes">
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">tiktok</a>
+      </div>
+    </div>
+  </footer>
+
+  <section class="medios-pago">
+    <h3>Medios de Pago Aceptados</h3>
+    <img src="imgmedios-pago.png" alt="Medios de Pago" />
+  </section>
+
+  <!-- SCRIPT CARRITO -->
+  <script>
+    let carrito = [];
+    const panel = document.getElementById('carrito-panel');
+    const abrir = document.getElementById('abrir-carrito');
+    const cerrar = document.getElementById('cerrar-carrito');
+    const lista = document.getElementById('carrito-items');
+    const totalSpan = document.getElementById('total');
+    const contador = document.getElementById('contador-carrito');
+
+    abrir.addEventListener('click', (e) => {
+      e.preventDefault();
+      panel.classList.add('abierto');
+    });
+
+    cerrar.addEventListener('click', () => {
+      panel.classList.remove('abierto');
+    });
+
+    function agregarAlCarrito(nombre, precio) {
+      carrito.push({ nombre, precio });
+      actualizarCarrito();
+    }
+
+    function actualizarCarrito() {
+      lista.innerHTML = '';
+      let total = 0;
+      carrito.forEach((item, i) => {
+        const li = document.createElement('li');
+        li.innerHTML = `${item.nombre} - $${item.precio} <button onclick="eliminarDelCarrito(${i})">x</button>`;
+        lista.appendChild(li);
+        total += item.precio;
+      });
+      totalSpan.textContent = total;
+      contador.textContent = carrito.length;
+    }
+
+    function eliminarDelCarrito(index) {
+      carrito.splice(index, 1);
+      actualizarCarrito();
+    }
+  </script>
+
+</body>
+</html>
