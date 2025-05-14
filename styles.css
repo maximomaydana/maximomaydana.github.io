@@ -593,3 +593,42 @@ header .icono-carrito {
   background: #b8860b;
   color: #fff;
 }
+@media (max-width: 600px) {
+  .carrito-panel {
+    width: 100vw;
+    max-width: 100vw;
+    right: -100vw;
+    padding: 14px;
+    font-size: 1em;
+  }
+  .carrito-panel.abierto {
+    right: 0;
+  }
+  .carrito-header-panel h2 {
+    font-size: 1.3em;
+  }
+  .pago-transferencia {
+    max-width: 97vw;
+    font-size: 1em;
+    padding: 12px 2vw;
+    word-break: break-all;
+  }
+  .pago-transferencia p {
+    font-size: 1em;
+    word-break: break-all;
+    margin-bottom: 9px;
+  }
+  .pago-transferencia h3 {
+    font-size: 1.1em;
+  }
+  .pago-transferencia a.boton-accion {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 1.02em;
+    box-sizing: border-box;
+  }
+  .carrito-total {
+    font-size: 1em;
+    padding-top: 11px;
+  }
+}
