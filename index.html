@@ -23,7 +23,6 @@
         <img src="logo-empresa.png" alt="Logo de la empresa" />
       </a>
     </div>
-
     <div class="menu-navegacion">
       <nav>
         <ul>
@@ -33,7 +32,6 @@
         </ul>
       </nav>
     </div>
-
     <div class="carrito-header">
       <a href="#" id="abrir-carrito">
         <img src="https://cdn-icons-png.flaticon.com/512/833/833314.png" alt="Carrito" class="icono-carrito" />
@@ -42,18 +40,25 @@
     </div>
   </header>
 
-  <!-- PANEL DEL CARRITO -->
-  <div id="carrito-panel" class="carrito-panel">
-    <div class="carrito-header-panel">
-      <h2>Tu Carrito</h2>
-      <button id="cerrar-carrito">&times;</button>
-    </div>
-    <ul id="carrito-items" class="carrito-items"></ul>
-    <div class="carrito-total">
-      Total: $<span id="total">0</span>
-      <button id="finalizar-compra">Finalizar Compra</button>
-    </div>
+<!-- PANEL DEL CARRITO -->
+<div id="carrito-panel" class="carrito-panel">
+  <div class="carrito-header-panel">
+    <h2>Tu Carrito</h2>
+    <button id="cerrar-carrito">&times;</button>
   </div>
+  <ul id="carrito-items" class="carrito-items"></ul>
+  <div class="carrito-total">
+    <b>Total: $<span id="total">0</span></b>
+  </div>
+  <section class="pago-transferencia">
+    <h3>Transferí a nuestra cuenta</h3>
+    <p><b>Alias:</b> tu.alias.mp</p>
+    <p><b>CBU:</b> 0000000000000000000000</p>
+    <p><b>Titular:</b> Tu Nombre y Apellido</p>
+    <p>Luego de transferir, envíanos el comprobante por WhatsApp para procesar tu compra.</p>
+    <a href="https://wa.me/54XXXXXXXXXX" class="boton-accion" target="_blank">Enviar comprobante por WhatsApp</a>
+  </section>
+</div>
 
   <!-- HERO -->
   <section class="hero" id="inicio">
@@ -78,35 +83,37 @@
     </div>
   </section>
 
-<!-- PRODUCTOS DESTACADOS -->
-<section class="productos">
-  <h2>Nuestros Productos</h2>
-  <div class="grid-productos">
-    
-    <div class="producto">
-      <img src="https://via.placeholder.com/300x200?text=Anillo+Oro" alt="Anillo Oro">
-      <h3>Anillo de Oro</h3>
-      <p>$5.000</p>
-      <button onclick="agregarAlCarrito('Anillo de Oro', 5000)">Agregar al carrito</button>
-    </div>
-
-    <div class="producto">
-      <img src="https://via.placeholder.com/300x200?text=Collar+Plata" alt="Collar Plata">
-      <h3>Collar de Plata</h3>
-      <p>$3.200</p>
-      <button onclick="agregarAlCarrito('Collar de Plata', 3200)">Agregar al carrito</button>
-    </div>
-
-    <div class="producto">
-      <img src="https://via.placeholder.com/300x200?text=Pulsera" alt="Pulsera">
-      <h3>Pulsera de Acero</h3>
-      <p>$2.800</p>
-      <button onclick="agregarAlCarrito('Pulsera de Acero', 2800)">Agregar al carrito</button>
-    </div>
-
+  <!-- Buscador de productos -->
+  <div class="buscador-productos">
+    <input type="text" id="input-buscar" placeholder="Buscar producto...">
   </div>
-</section>
 
+  <!-- PRODUCTOS DESTACADOS -->
+  <section class="productos">
+    <h2>Nuestros Productos</h2>
+    <div class="grid-productos">
+      <div class="producto">
+        <span class="etiqueta">¡Oferta!</span>
+        <img src="https://via.placeholder.com/300x200?text=Anillo+Oro" alt="Anillo Oro">
+        <h3>Anillo de Oro</h3>
+        <p>$5.000</p>
+        <button onclick="agregarAlCarrito('Anillo de Oro', 5000)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <span class="etiqueta nuevo">Nuevo</span>
+        <img src="https://via.placeholder.com/300x200?text=Collar+Plata" alt="Collar Plata">
+        <h3>Collar de Plata</h3>
+        <p>$3.200</p>
+        <button onclick="agregarAlCarrito('Collar de Plata', 3200)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://via.placeholder.com/300x200?text=Pulsera" alt="Pulsera">
+        <h3>Pulsera de Acero</h3>
+        <p>$2.800</p>
+        <button onclick="agregarAlCarrito('Pulsera de Acero', 2800)">Agregar al carrito</button>
+      </div>
+    </div>
+  </section>
 
   <!-- GALERÍA -->
   <section class="galeria">
@@ -142,6 +149,30 @@
     </div>
   </section>
 
+  <!-- Testimonios y FAQ -->
+  <section class="testimonios">
+    <h3>Testimonios</h3>
+    <div class="testi">
+      <blockquote>“Las mejores joyas que compré, excelente atención.”</blockquote>
+      <cite>- Camila R.</cite>
+    </div>
+    <div class="testi">
+      <blockquote>“Envíos rápidos y diseños exclusivos, ¡los recomiendo!”</blockquote>
+      <cite>- Juan P.</cite>
+    </div>
+  </section>
+  <section class="faq">
+    <h3>Preguntas Frecuentes</h3>
+    <details>
+      <summary>¿Cómo puedo comprar?</summary>
+      <p>Seleccioná el producto y hacé clic en “Agregar al carrito”.</p>
+    </details>
+    <details>
+      <summary>¿Hacen envíos a todo el país?</summary>
+      <p>Sí, por Andreani y correo.</p>
+    </details>
+  </section>
+
   <!-- FOOTER -->
   <footer class="footer" id="contacto">
     <div class="columna-footer logo-footer">
@@ -174,12 +205,50 @@
     </div>
   </footer>
 
+  <!-- Formulario de contacto -->
+  <section class="form-contacto">
+    <h3>Contacto rápido</h3>
+    <form>
+      <input type="text" placeholder="Nombre" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Mensaje" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Newsletter -->
+  <form class="newsletter">
+    <input type="email" placeholder="Tu email" required>
+    <button type="submit">Suscribirse</button>
+  </form>
+
   <section class="medios-pago">
     <h3>Medios de Pago Aceptados</h3>
     <img src="imgmedios-pago.png" alt="Medios de Pago" />
   </section>
 
-  <!-- SCRIPT CARRITO -->
+  <!-- Botón volver arriba -->
+  <button id="scrollTop">↑</button>
+
+  <!-- Scripts: mejoras, buscador, scrolltop -->
+  <script>
+    // Buscador de productos
+    document.getElementById('input-buscar').addEventListener('keyup', function() {
+      const query = this.value.toLowerCase();
+      document.querySelectorAll('.grid-productos .producto').forEach(prod => {
+        prod.style.display = prod.innerText.toLowerCase().includes(query) ? '' : 'none';
+      });
+    });
+
+    // Scroll to top
+    window.addEventListener('scroll', () => {
+      document.getElementById('scrollTop').style.display =
+        window.scrollY > 300 ? 'block' : 'none';
+    });
+    document.getElementById('scrollTop').onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+  </script>
+
+  <!-- SCRIPT CARRITO (el tuyo, sin modificar) -->
   <script>
     let carrito = [];
     const panel = document.getElementById('carrito-panel');
