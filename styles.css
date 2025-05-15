@@ -632,3 +632,16 @@ header .icono-carrito {
     padding-top: 11px;
   }
 }
+@media (max-width: 600px) {
+  .pago-transferencia a.boton-accion {
+    width: 100%;
+    padding: 13px 0;
+    font-size: 1.08em;
+    text-align: center;
+    white-space: normal;
+    word-break: break-word;
+    line-height: 1.2;
+    box-sizing: border-box;
+    margin-bottom: 8px;
+  }
+}
