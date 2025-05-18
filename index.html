@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joyassnela</title>
+  <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css">
+  <link rel="main.js" href="main.js">
+</head>
+<body>
+  <div class="marquesina">
+    <div class="marquesina-contenido">
+      Envíos a todo el país! &nbsp; Envíos a todo el país! &nbsp; …
+    </div>
+  </div>
+  
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="logo-empresa.png" alt="Logo de la empresa" />
+      </a>
+    </div>
+    <div class="menu-navegacion">
+      <nav>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="carrito-header">
+      <a href="#" id="abrir-carrito">
+        <img src="https://cdn-icons-png.flaticon.com/512/833/833314.png" alt="Carrito" class="icono-carrito" />
+        <span class="contador" id="contador-carrito">0</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- PANEL DEL CARRITO -->
+  <div id="carrito-panel" class="carrito-panel">
+    <div class="carrito-header-panel">
+      <h2>Tu Carrito</h2>
+      <button id="cerrar-carrito">&times;</button>
+    </div>
+    <ul id="carrito-items" class="carrito-items"></ul>
+    <div class="carrito-total">
+      <b>Total: $<span id="total">0</span></b>
+    </div>
+    <section class="pago-transferencia">
+      <h3>Transferí a nuestra cuenta</h3>
+      <p><b>Alias:</b> tu.alias.mp</p>
+      <p><b>CBU:</b> 0000000000000000000000</p>
+      <p><b>Titular:</b> Tu Nombre y Apellido</p>
+      <p>Luego de transferir, envíanos el comprobante por WhatsApp para procesar tu compra.</p>
+      <a href="https://wa.me/5491126103231?text=Hola!%20Te%20env%C3%ADo%20el%20comprobante%20de%20pago" class="boton-accion" target="_blank">
+        Enviar comprobante<br>por WhatsApp
+      </a>
+    </section>
+    <!-- BOTÓN FINALIZAR COMPRA POR WHATSAPP -->
+    <button onclick="finalizarCompra()" class="boton-accion" style="margin: 16px 0 0 0; width: 95%;">Finalizar compra por WhatsApp</button>
+    <!-- BOTÓN ENVIAR RESUMEN POR EMAIL -->
+    <button onclick="enviarPorEmail()" class="boton-accion" style="margin: 10px 0 12px 0; width: 95%; background:#e6e6e6; color:#000;">Enviar resumen por Email</button>
+  </div>
+  
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <h1>Joyassnela</h1>
+    <p>Ofrecemos soluciones innovadoras para potenciar tu negocio y llevarlo al siguiente nivel.</p>
+    <a href="#servicios" class="boton-accion">Conocé nuestros servicios</a>
+  </section>
+
+  <!-- DOS COLUMNAS -->
+  <section class="seccion-dos-columnas">
+    <div class="columna imagen">
+      <div class="contenedor-imagen">
+        <img src="https://via.placeholder.com/1000x700?text=Imagen+Extra+Grande" alt="Ejemplo Grande" />
+      </div>
+    </div>
+    <div class="columna contenido">
+      <h2>Sobre Nosotros</h2>
+      <p>Diseños exclusivos y modernos.</p>
+      <p>Productos artesanales únicos.</p>
+      <p>Experiencia personalizada.</p>
+      <a href="#servicios" class="enlace-servicios">Conocé Nuestro Trabajo</a>
+    </div>
+  </section>
+
+  <!-- Buscador de productos -->
+  <div class="buscador-productos">
+    <input type="text" id="input-buscar" placeholder="Buscar producto...">
+  </div>
+
+  <!-- CARRUSEL DE PRODUCTOS HORIZONTAL -->
+<section class="productos">
+  <h2>Nuestros Productos</h2>
+  <div class="carrusel-productos" id="carrusel-productos">
+    <div class="carrusel-contenido" id="carrusel-contenido">
+      <div class="producto">
+        <img src="logo-empresa.png" alt="Anillo de Oro">
+        <h3>Anillo de Oro</h3>
+        <p>$4500</p>
+        <button onclick="agregarAlCarrito('Anillo de Oro', 4500, 'logo-empresa.png')">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="imgmedios-pago.png" alt="Aros Estrella">
+        <h3>Aros Estrella</h3>
+        <p>$2500</p>
+        <button onclick="agregarAlCarrito('Aros Estrella', 2500, 'imgmedios-pago.png')">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="logo-empresa.png" alt="Pulsera Corazón">
+        <h3>Pulsera Corazón</h3>
+        <p>$3200</p>
+        <button onclick="agregarAlCarrito('Pulsera Corazón', 3200, 'logo-empresa.png')">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="logo-empresa.png" alt="Anillo de Oro">
+        <h3>Anillo de Oro</h3>
+        <p>$4500</p>
+        <button onclick="agregarAlCarrito('Anillo de Oro', 4500, 'logo-empresa.png')">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="imgmedios-pago.png" alt="Aros Estrella">
+        <h3>Aros Estrella</h3>
+        <p>$2500</p>
+        <button onclick="agregarAlCarrito('Aros Estrella', 2500, 'imgmedios-pago.png')">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="logo-empresa.png" alt="Pulsera Corazón">
+        <h3>Pulsera Corazón</h3>
+        <p>$3200</p>
+        <button onclick="agregarAlCarrito('Pulsera Corazón', 3200, 'logo-empresa.png')">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="logo-empresa.png" alt="Anillo de Oro">
+        <h3>Anillo de Oro</h3>
+        <p>$4500</p>
+        <button onclick="agregarAlCarrito('Anillo de Oro', 4500, 'logo-empresa.png')">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="imgmedios-pago.png" alt="Aros Estrella">
+        <h3>Aros Estrella</h3>
+        <p>$2500</p>
+        <button onclick="agregarAlCarrito('Aros Estrella', 2500, 'imgmedios-pago.png')">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="logo-empresa.png" alt="Pulsera Corazón">
+        <h3>Pulsera Corazón</h3>
+        <p>$3200</p>
+        <button onclick="agregarAlCarrito('Pulsera Corazón', 3200, 'logo-empresa.png')">Agregar al carrito</button>
+      </div><div class="producto">
+        <img src="logo-empresa.png" alt="Anillo de Oro">
+        <h3>Anillo de Oro</h3>
+        <p>$4500</p>
+        <button onclick="agregarAlCarrito('Anillo de Oro', 4500, 'logo-empresa.png')">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="imgmedios-pago.png" alt="Aros Estrella">
+        <h3>Aros Estrella</h3>
+        <p>$2500</p>
+        <button onclick="agregarAlCarrito('Aros Estrella', 2500, 'imgmedios-pago.png')">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="logo-empresa.png" alt="Pulsera Corazón">
+        <h3>Pulsera Corazón</h3>
+        <p>$3200</p>
+        <button onclick="agregarAlCarrito('Pulsera Corazón', 3200, 'logo-empresa.png')">Agregar al carrito</button>
+      </div>
+      <!-- Podés agregar más productos acá -->
+    </div>
+  </div>
+</section>
+
+
+  <!-- galeria -->
+  <section class="galeria">
+    <h2 style="text-align:center;">Galería de Proyectos</h2>
+    <div class="carrusel-galeria-doble">
+      <div class="fila-galeria">
+        <div class="foto-galeria"><img src="https://via.placeholder.com/300x200?text=Imagen+1" alt="Imagen 1" /></div>
+        <div class="foto-galeria"><img src="https://via.placeholder.com/300x200?text=Imagen+2" alt="Imagen 2" /></div>
+        <div class="foto-galeria"><img src="https://via.placeholder.com/300x200?text=Imagen+3" alt="Imagen 3" /></div>
+        <div class="foto-galeria"><img src="https://via.placeholder.com/300x200?text=Imagen+4" alt="Imagen 4" /></div>
+        <div class="foto-galeria"><img src="https://via.placeholder.com/300x200?text=Imagen+5" alt="Imagen 5" /></div>
+      </div>
+      <div class="fila-galeria">
+        <div class="foto-galeria"><img src="https://via.placeholder.com/300x200?text=Imagen+6" alt="Imagen 6" /></div>
+        <div class="foto-galeria"><img src="https://via.placeholder.com/300x200?text=Imagen+7" alt="Imagen 7" /></div>
+        <div class="foto-galeria"><img src="https://via.placeholder.com/300x200?text=Imagen+8" alt="Imagen 8" /></div>
+        <div class="foto-galeria"><img src="https://via.placeholder.com/300x200?text=Imagen+9" alt="Imagen 9" /></div>
+        <div class="foto-galeria"><img src="https://via.placeholder.com/300x200?text=Imagen+10" alt="Imagen 10" /></div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- INFO SERVICIOS -->
+  <section class="info-servicios" id="servicios">
+    <div class="bloque">
+      <img src="https://cdn-icons-png.flaticon.com/512/2910/2910768.png" alt="Envíos" />
+      <h3>Envíos</h3>
+      <p>Andreani</p>
+    </div>
+    <div class="bloque">
+      <a href="https://wa.me/549XXXXXXXXXX" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+        <h3>Escribinos!</h3>
+        <p>WhatsApp disponible</p>
+      </a>
+    </div>
+    <div class="bloque">
+      <img src="https://cdn-icons-png.flaticon.com/512/633/633611.png" alt="Pagos" />
+      <h3>Medios de Pago</h3>
+      <p>Transferencia por alias o cbu/cvu</p>
+    </div>
+  </section>
+
+  <section class="faq">
+    <h3>Preguntas Frecuentes</h3>
+    <details>
+      <summary>¿Cómo puedo comprar?</summary>
+      <p>Seleccioná el producto y hacé clic en “Agregar al carrito” y para terminar mandanos el comprobante de pago y los productos con el boton de finalizar compra por WHATSAPP para realizar el envio.</p>
+    </details>
+    <details>
+      <summary>¿Hacen envíos a todo el país?</summary>
+      <p>Sí, por Andreani y correo.</p>
+    </details>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="contacto">
+    <div class="columna-footer logo-footer">
+      <img src="logo-empresa.png" alt="Logo de la empresa" />
+    </div>
+    <div class="columna-footer servicios-footer">
+      <h3>Servicios</h3>
+      <ul>
+        <li>Diseño Web</li>
+        <li>Frontend</li>
+        <li>Responsive Design</li>
+      </ul>
+    </div>
+    <div class="columna-footer legales-footer">
+      <h3>Legales</h3>
+      <ul>
+        <li>Aviso legal</li>
+        <li>Política de privacidad</li>
+        <li>Términos de uso</li>
+        <li>Cookies</li>
+      </ul>
+    </div>
+    <div class="columna-footer redes-footer">
+      <h3>Redes Sociales</h3>
+      <div class="redes">
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">tiktok</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <section class="medios-pago">
+    <h3>Medios de Pago Aceptados</h3>
+    <img src="imgmedios-pago.png" alt="Medios de Pago" />
+  </section>
+
+  <!-- Botón volver arriba -->
+  <button id="scrollTop">↑</button>
+
+  <!-- ÚNICO SCRIPT QUE DEBE QUEDAR -->
+  <script src="main.js"></script>
+</body>
+</html>
