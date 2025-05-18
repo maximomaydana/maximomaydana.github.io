@@ -906,4 +906,28 @@ button:hover { background: #b8860b; color: #fff;}
       padding: 10px;
     }
   }
-  
+  /* Mejora carrusel responsive y swipe mobile */
+.carrusel-productos {
+  overflow-x: auto;    /* Para que puedas hacer scroll táctil en mobile */
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Esconde barra scroll en Firefox */
+}
+.carrusel-productos::-webkit-scrollbar {
+  display: none; /* Esconde barra scroll en Chrome/Safari */
+}
+
+/* Pausa animación carrusel al pasar mouse (PC) */
+.carrusel-contenido:hover {
+  animation-play-state: paused;
+}
+
+/* Asegura margen lateral en mobile para que los productos no queden pegados */
+@media (max-width: 700px) {
+  .carrusel-productos {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .carrusel-contenido {
+    gap: 12px;
+  }
+}
